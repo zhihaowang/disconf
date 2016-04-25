@@ -22,13 +22,13 @@ public class ConfigMgr {
      * 初始化配置
      *
      * @throws Exception
-     */
-    public synchronized static void init() throws Exception {
+                */
+        public synchronized static void init() throws Exception {
 
-        LOGGER.info("--------------- LOAD CONFIG START ---------------");
+            LOGGER.info("--------------- LOAD CONFIG START ---------------");
 
-        //
-        LOGGER.info("Finer print: " + DisClientComConfig.getInstance().getInstanceFingerprint());
+            //通用数据，指纹等
+            LOGGER.info("Finer print: " + DisClientComConfig.getInstance().getInstanceFingerprint());
 
         // 导入系统配置
         DisClientSysConfig.getInstance().loadConfig(null);
